@@ -1,0 +1,24 @@
+.BBPartnerWalletCardWrapper {
+  background: linear-gradient(107.38deg, #4C49ED 2.61%, #0A06F4 101.2%);
+  grid-template-columns: 1.5fr 0.5fr;
+  border-radius: 25px;
+}
+
+
+.BBPartnerWalletCardLeftWrapper {
+  padding: 24px 26px;
+}
+
+.BBPartnerWalletCardRightWrapper {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 22px 24px 24px 17px;
+}
+
+.BBPartnerWalletCardLeftBottomWrapper {
+  margin-top: 4.6rem;
+  grid-gap: 15px;
+}
+
+.BBPartnerWalletCardLeftBottomWrapper span {
+  color: rgba(255, 255, 255, 0.7);
+}

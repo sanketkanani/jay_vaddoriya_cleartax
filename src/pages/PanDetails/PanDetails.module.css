@@ -1,0 +1,79 @@
+.PanDetailsBottomWrapper {
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-gap: 4.3rem;
+}
+
+.PanDetailsBottomWrapper .PanDetailsBottomBoxWrapper {
+  background-color: #E0DFFF;
+  padding: 5rem 4.5rem;
+  border-radius: 14px;
+}
+
+.PanDetailsBottomBoxLeftWrapper {
+  max-width: 184px;
+}
+
+.PanDetailsBottomBoxRightWrapper {
+  background-color: var(--clr-white);
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PanDetailsTopWrapper {
+  background: linear-gradient(0deg, #2C29FB, #2C29FB),
+    radial-gradient(108.99% 120.72% at 12.21% 15.01%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border-radius: 14px;
+  padding: 5rem 6rem;
+  margin-bottom: 4rem;
+  grid-template-columns: 465px 350px;
+  grid-gap: 4rem;
+}
+
+.PanDetailsRightStepsWrapper p {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.PanDetailsRightStepsWrapper :global .ant-steps-item-tail::after {
+  background-color: transparent;
+  border: 1px dashed var(--clr-white);
+}
+
+.PanDetailsRightStepsWrapper :global .ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  outline: 4px solid rgba(47, 45, 173, 1);
+}
+
+
+.PanDetailsLeftButtonWrapper {
+  grid-gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 5.1rem;
+}
+
+.PanDetailsLeftContentWrapper {
+  grid-gap: 15px;
+}
+
+.PanDetailsLeftContentWrapper h1 {
+  font-size: 4rem;
+  line-height: 1.185;
+}
+
+.PanDetailsLeftContentWrapper p:global.p-lg {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width:1024px) {
+  .PanDetailsTopWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:425px) {
+  .PanDetailsLeftButtonWrapper button {
+    width: 100%;
+  }
+}

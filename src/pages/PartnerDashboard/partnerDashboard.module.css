@@ -1,0 +1,47 @@
+.PartnerDashboardTop {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  grid-gap: 15px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--clr-gray-line);
+  gap: 2px;
+  padding: 0;
+}
+
+.summaryItem {
+  background-color: var(--clr-white);
+  padding: var(--space-2xl) calc(var(--space-xl) + var(--space-md));
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.summaryItem:nth-child(2) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+
+
+@media (max-width:1439px) {
+  .PartnerDashboardTop {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:575px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryItem:nth-child(2) {
+    grid-row-start: 3;
+    grid-row-end: unset;
+    grid-column-start: unset;
+  }
+
+}

@@ -1,0 +1,240 @@
+.main {
+  --radius: 14px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 25px 0px #0000001f;
+  --form-content-height: 300px;
+}
+
+.content {
+  padding: calc(var(--space-2xl) + var(--space-md));
+  border-radius: var(--radius);
+  max-height: calc(100vh - var(--form-content-height));
+  overflow: auto;
+}
+
+.taxFormSection {
+  --left-offset: 36px;
+  --divider-height: 5px;
+  position: relative;
+  padding-bottom: calc(var(--space-2xl) + var(--space-2xl));
+  margin-bottom: calc(var(--space-2xl) + var(--space-md));
+  padding-left: var(--left-offset);
+}
+
+.taxFormSection:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--divider-height);
+  background-color: #ededed;
+  width: 600px;
+  bottom: calc(var(--divider-height) / 2 * -1);
+}
+
+.taxFormSection:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.taxFormTitleWrap {
+  display: flex;
+  align-items: flex-start;
+  margin-left: calc(var(--left-offset) * -1);
+  gap: 14px;
+  margin-bottom: 4rem;
+}
+
+.taxFormTitleImg {
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.taxFormDesc {
+  color: #696969;
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: var(--space-xl);
+  background-color: #e5f3ff;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border-bottom: 1px solid #359eff;
+}
+
+.TaxSummaryWrapper {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5rem;
+}
+
+.TaxSummaryWrapper h5 {
+  color: #858585;
+}
+
+.BusinessIncomeWrapper {
+  border-style: solid;
+  border-color: #d0d0d0;
+  padding: var(--space-lg);
+  border-radius: 6px;
+}
+
+.BusinessIncomeWrapperProfessional,
+.BusinessIncomeWrapperGainSummary {
+  background-color: #ececec;
+}
+
+.BusinessIncomeWrapperGainSummary li {
+  color: #727272;
+}
+
+.BusinessIncomeWrapperProfessional {
+  padding: 10px 16px;
+  margin-left: 23px;
+  border-radius: 6px;
+}
+
+.BusinessIncomeWrapperProfessional p {
+  color: var(--clr-black) !important;
+}
+
+.BusinessIncomeWrapperProfessional a {
+  color: #4a4a4a;
+}
+
+.BusinessIncomeWrapper .BusinessIncomeWrapper {
+  max-width: 150px;
+}
+
+.BusinessIncomeWrapper ul {
+  padding-left: 15px;
+  margin-top: 9px;
+  margin-bottom: 19px;
+}
+
+.BusinessIncomeWrapper p,
+.BusinessIncomeWrapper ul li {
+  color: #808080;
+}
+
+.BusinessIncomeWrapperGainSummary ul {
+  grid-gap: calc(var(--space-xl) - 2px);
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.TaxSavingInvestmentsCheckboxes {
+  margin-left: calc(var(--left-offset) * -1);
+  margin-inline-start: calc(var(--left-offset) * -1) !important;
+}
+
+.TaxSavingInvestmentsSelect,
+.TaxSavingInvestmentsInput {
+  max-width: 225px;
+  margin-left: calc(var(--left-offset) * -1);
+}
+
+.savedTexesWrapper {
+  width: 100%;
+  height: 129px;
+  top: 691px;
+  left: 523px;
+  border-radius: 17px;
+  background: rgb(33, 212, 252);
+  background: linear-gradient(
+    142deg,
+    rgba(33, 212, 252, 1) 0%,
+    rgba(112, 104, 249, 1) 100%
+  );
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: var(--clr-white);
+}
+
+.savedTexesWrapper h3 {
+  font-size: 3.1rem;
+}
+
+.isEditBtnWrapper {
+  background-color: #dbeeff;
+}
+
+.residentialStatus {
+  margin-left: calc(var(--left-offset) * -1);
+}
+
+.residentialStatus > div {
+  min-height: 55px;
+  height: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: var(--text-xl);
+  border-radius: 6px;
+}
+
+.CapitalGainWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-gap: var(--space-2xl);
+}
+
+.BusinessIncomeInputWrapper {
+  grid-template-columns: 1.3fr 2fr 0.1fr;
+}
+
+.BusinessIncomeInputLeftWrapper {
+  margin-right: var(--space-2xl);
+}
+
+.BusinessIncomeSpanWrapper {
+  color: var(--text-);
+  /* margin-left: var(--space-lg); */
+  /* margin-top: calc(var(--space-2xl) + var(--space-xs)); */
+}
+
+@media (max-width: 991px) {
+  .main {
+    --radius: 0;
+    --form-content-height: 400px;
+  }
+
+  .taxFormSection {
+    --left-offset: 0;
+  }
+
+  .taxFormSection:not(:last-child):after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .BusinessIncomeInputWrapper {
+    grid-template-columns: 100%;
+  }
+
+  .BusinessIncomeInputLeftWrapper {
+    margin-left: 0;
+    margin-bottom: var(--space-xl);
+  }
+
+  .BusinessIncomeWrapperProfessional {
+    margin: 0;
+  }
+
+  .BusinessIncomeWrapperProfessional p {
+    width: 100% !important;
+  }
+}

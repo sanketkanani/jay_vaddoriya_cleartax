@@ -1,0 +1,86 @@
+.main {
+  height: 100vh;
+  grid-template-columns: 1.8fr 1.3fr;
+}
+
+.AuthenticationLeft {
+  background-image: url(../../assets/images/cover/auth-bg.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.AuthenticationLeftContentWrapper {
+  max-width: 621px;
+  padding: 14px 7.4rem;
+}
+
+.AuthenticationLeftContentWrapper h1 {
+  font-family: Roboto;
+  font-size: 3.1rem;
+  line-height: 2.1875;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+}
+
+.AuthenticationLeftContentWrapper span {
+  font-family: "Zen Dots", sans-serif;
+  font-size: 6.2rem;
+}
+
+.AuthenticationRight {
+  padding: calc(var(--space-2xl) * 2);
+  overflow: auto;
+  height: 100%;
+  grid-gap: calc(var(--space-2xl) * 2);
+}
+
+.AuthenticationRightLogoWrapper {
+  padding: 7px;
+}
+
+.AuthenticationLeftContentListingWrapper {
+  font-size: 2.4rem;
+  letter-spacing: 0.3px;
+  line-height: 2.08;
+  font-weight: 500;
+  list-style: none;
+}
+
+.AuthenticationLeftContentListingWrapper li {
+  padding-left: 3rem;
+  position: relative;
+}
+
+.AuthenticationLeftContentListingWrapper li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L5.5 10L15 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: var(--text-lg);
+  width: var(--text-lg);
+  height: var(--text-lg);
+}
+
+@media (max-width:1024px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width:991px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .AuthenticationRight {
+    margin: auto 0;
+    height: auto;
+  }
+
+  .AuthenticationLeft {
+    display: none;
+  }
+}

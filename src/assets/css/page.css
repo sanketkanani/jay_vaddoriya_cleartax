@@ -1,0 +1,9 @@
+[class^="ant-tabs"] {
+  font-size: var(--text-xl);
+}
+
+
+.avatar-uploader {
+  max-width: 102px;
+  max-height: 102px;
+}

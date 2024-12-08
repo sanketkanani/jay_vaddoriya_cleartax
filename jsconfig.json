@@ -1,0 +1,13 @@
+{
+  "exclude": ["/node_modules/"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@layouts": ["./src/layouts"],
+      "@components": ["./src/components"],
+      "@constants": ["./src/constants"],
+      "@utils": ["./src/utils"],
+      "@images": ["./src/assets/images"]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.WalletGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--space-2xl) + var(--space-xs));
+}
+
+.addMoneyToWallet {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.addonBtn {
+  height: 32px;
+  background-color: #E2E1FF;
+  padding: 6px var(--space-md);
+  border-radius: var(--space-md);
+  line-height: 1;
+  color: var(--clr-primary);
+  font-weight: 600;
+  border-color: transparent;
+  font-size: var(--text-lg);
+}
+
+.lastTransaction {
+  grid-column: span 3;
+}
+
+@media (max-width: 1365px) {
+  .WalletGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lastTransaction {
+    grid-column: span 2;
+  }
+
+  .addMoneyToWallet {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 1365px) {
+  .WalletGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .addMoneyToWallet {
+    grid-row: span 1;
+  }
+
+  .lastTransaction {
+    grid-column: span 1;
+  }
+}

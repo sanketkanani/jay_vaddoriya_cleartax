@@ -1,0 +1,12 @@
+.resourcesSlider {
+  filter: drop-shadow(0px 1px 14px #0000001C);
+}
+
+.resourcesCard {
+  min-height: 280px;
+  border-radius: var(--space-lg);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+}
